@@ -43,18 +43,21 @@ class _ListeState extends State<Liste> {
           final article = _articles[index];
           return GestureDetector(
               onTap: () {
-                _markArticle(article.id, !article.okay);
+                _markArticle(article.id, article.okay!);
                 setState(() {
-                  article.okay = !article.okay;
+                  print(article.okay);
+                  article.okay = !article.okay!;
+                  print(article.okay);
+                  print("ici");
                 });
               },
               child: Opacity(
-                opacity: article.okay ? 0.3 : 1,
+                opacity: article.okay! ? 0.3 : 1,
                 child: ListTile(
                   title: Text(
                     article.nom,
                     style: TextStyle(
-                      decoration: article.okay
+                      decoration: article.okay!
                           ? TextDecoration.lineThrough
                           : TextDecoration.none,
                     ),
