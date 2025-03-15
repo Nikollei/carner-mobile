@@ -11,4 +11,4 @@ flutter build apk --release
 ````
 
 ## 💻 Backend
-https://github.com/NicoRiri/carner-backend
+https://github.com/Nikollei/carner-backend
